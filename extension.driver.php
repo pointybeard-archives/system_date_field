@@ -4,7 +4,7 @@
 	
 		public function about(){
 			return array('name' => 'Field: System Date',
-						 'version' => '1.0',
+						 'version' => '0.1',
 						 'release-date' => '2009-08-05',
 						 'author' => array('name' => 'Alistair Kearney',
 										   'website' => 'http://www.symphony21.com',
