@@ -72,9 +72,10 @@
  			return NULL;
 		}
 		
-		public function appendFormattedElement(&$wrapper, $data, $encode = false) {
-			return;
-			if (isset($data['gmt']) && !is_null($data['gmt'])) {
+		public function appendFormattedElement(&$wrapper, $data, $encode = false, $mode=NULL, $entry_id=NULL) {
+			$row = self::__dateFromEntryID($entry_id);
+			
+			if(isset($row['local']) && !is_null($row['local'])) {
 				$wrapper->appendChild(General::createXMLDateObject($data['local'], $this->get('element_name')));
 			}
 		}
